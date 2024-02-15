@@ -21,22 +21,24 @@ I wanted to check for outliers:
 
 SELECT "unit_price", COUNT("unit_price") FROM analytics_1 GROUP BY "unit_price" 
 
-I retrieved sample data from columns in each table: 
-
-SELECT DISTINCT("units_sold")
-FROM analytics_1
-
-SELECT *
-FROM analytics_1
-LIMIT 100 
 
 I checked columns that seemed to contain a lot of NULL values, and double checked if the entire column is NULL or not: 
 
 SELECT DISTINCT("units_sold")
 FROM analytics_1  
 
-I wanted to check for outliers: 
+I wanted to check if there were primary keys in each table: 
 
-SELECT "unit_price", COUNT("unit_price") 
-FROM analytics_1
-GROUP BY "unit_price"
+SELECT COUNT(*), "fullVisitorId"
+FROM ecommerce
+GROUP BY "fullVisitorId"
+ORDER BY 1 DESC  
+
+It looked like I can link the productSKU on the sales_report table and sales_by_sku, but I got an error- so I ran this code: 
+
+SELECT DISTINCT "productSKU" FROM sales_by_sku
+WHERE "productSKU" NOT IN (SELECT DISTINCT "productSKU" FROM sales_report); 
+
+The rows are not linked on each row, so I confirmed they cannot be Primary Key or Foreign Key
+
+
