@@ -11,7 +11,7 @@
 (fill in what you discovered this data could tell you and how you used the data to answer those questions)
 
 ## Challenges 
-(discuss challenges you faced in the project)
+1. uploading csv files to pGadmin (experienced technical issue)
 
 ## Future Goals
 (what would you do if you had more time?)
