@@ -10,6 +10,26 @@ Create a new PostgreSQL database called `ecommerce`. Set up tables for each .csv
 
 ## Part 2: Data Cleaning
 
+I retrieved sample data from columns in each table: 
+
+SELECT DISTINCT("units_sold")
+FROM analytics_1
+
+SELECT *
+FROM analytics_1
+LIMIT 100 
+
+I checked columns that seemed to contain a lot of NULL values, and double checked if the entire column is NULL or not: 
+
+SELECT DISTINCT("units_sold")
+FROM analytics_1  
+
+I wanted to check for outliers: 
+
+SELECT "unit_price", COUNT("unit_price") 
+FROM analytics_1
+GROUP BY "unit_price"
+
 As always, once you have received any dataset, your first task is to orient yourself to the data contained within. While exploring the data, you should keep an eye out for any of potential data issues that need to be cleaned. 
 
 **Cleaning hint**: The unit cost in the data needs to be divided by 1,000,000. 
