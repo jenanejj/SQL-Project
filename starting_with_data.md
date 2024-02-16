@@ -58,8 +58,14 @@ Answer:
 
 " 22 oz Water Bottle" and it has 19655 in stock
 
-Question 5: 
+Question 5: Which product has the most revenue? 
 
 SQL Queries:
+SELECT "v2ProductName", "v2ProductCategory", "pageTitle", "revenue"
+FROM analytics_1 AS an
+JOIN ecommerce AS ec
+ON an."visitId"= ec."visitId"
+WHERE revenue IS NOT NULL
+ORDER BY revenue DESC
 
-Answer:
+Answer: ""SPF-15 Slim & Slender Lip Balm"
