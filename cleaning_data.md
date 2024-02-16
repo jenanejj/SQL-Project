@@ -32,7 +32,12 @@ I wanted to check if there were primary keys in each table:
 SELECT COUNT(*), "fullVisitorId"
 FROM ecommerce
 GROUP BY "fullVisitorId"
-ORDER BY 1 DESC  
+ORDER BY 1 DESC   
+
+I divided the unit_price column in the analytics table by 1,000,000 and converted it to INT datatype: 
+
+SELECT *, (CAST("unit_price" AS INT)/1000000) AS unitpricedivided 
+FROM "analytics_1"
 
 It looked like I can link the productSKU on the sales_report table and sales_by_sku, but I got an error- so I ran this code: 
 
