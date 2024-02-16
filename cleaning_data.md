@@ -44,6 +44,15 @@ It looked like I can link the productSKU on the sales_report table and sales_by_
 SELECT DISTINCT "productSKU" FROM sales_by_sku
 WHERE "productSKU" NOT IN (SELECT DISTINCT "productSKU" FROM sales_report); 
 
-The rows are not linked on each row, so I confirmed they cannot be Primary Key or Foreign Key
+The rows are not linked on each row, so I confirmed they cannot be Primary Key or Foreign Key. 
+
+I wanted to review columns in tables that only contained NULL values and replace it with relevant information. For exacmple, in the analytics table, the userid column only contains NULL values. So, I created this query: 
+
+SELECT *,
+CASE 
+WHEN userid IS NULL THEN "analytics_1"."visitId"
+ELSE userid
+END AS user_info
+FROM analytics_1;
 
 
