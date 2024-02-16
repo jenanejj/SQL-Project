@@ -1,9 +1,16 @@
-Question 1: 
+Which country has the most visitors that generates the most revenue: 
 
-SQL Queries:
+SQL Queries: 
+
+SELECT *, 
+ROW_NUMBER() OVER (PARTITION BY country) AS row_num
+FROM ecommerce 
+WHERE "totalTransactionRevenue" IS NOT NULL
+ORDER BY "totalTransactionRevenue" DESC
 
 Answer: 
 
+United States 
 
 
 Question 2: 
