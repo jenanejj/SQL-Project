@@ -9,7 +9,9 @@ The userid column in the analytics table should be a primary key, as we want to 
 
 SELECT userid 
 FROM analytics_1
-WHERE userid IS NOT NULL
+WHERE userid IS NOT NULL 
+
+If there are no rows returned, then the QA test is passed. If rows are returned, then the QA test is failed. 
 
 I checked columns if they contain NULLS: 
 
