@@ -31,4 +31,6 @@ GROUP BY "productSKU"
 
 SELECT COUNT("productSKU"), "productSKU"
 FROM sales_report
-GROUP BY "productSKU" 
+GROUP BY "productSKU"  
+
+The rows returned have different numbers, so I am assuming there are data missing. 
