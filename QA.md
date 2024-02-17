@@ -19,4 +19,16 @@ SELECT userid
 FROM analytics_1
 WHERE userid IS NOT NULL 
 
-I noticed that productSKU column in the ecommerce table and productSKU column seemed to be the same. So, I tried to link them to double check the referential integrity of the data. 
+I noticed that productSKU column in the ecommerce table and productSKU column seemed to be the same. So, I tried to link them to double check the referential integrity of the data.  
+
+I want to make sure the data reliable. I am assuming that the productSKU in sales_report table and sales_by_SKU to have the same information: 
+
+I used this query to check reliability:
+
+SELECT COUNT("productSKU"), "productSKU"
+FROM sales_by_sku
+GROUP BY "productSKU" 
+
+SELECT COUNT("productSKU"), "productSKU"
+FROM sales_report
+GROUP BY "productSKU" 
