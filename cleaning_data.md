@@ -11,11 +11,11 @@ I experienced issues importing the data, and assigned all data types as VARCHAR.
 
 SELECT unit_price, 
 CAST (unit_price AS NUMERIC)
-FROM analytics_1
+FROM analytics_1  --changed datatype from VARCHAR to NUMERIC
 
 SELECT date_column, 
-CAST (date_column AS DATE)
-FROM analytics_1 
+CAST (date_column AS DATE) 
+FROM analytics_1 --changed datatype from VARCHAR to NUMERIC
 
 I retrieved sample data from columns in each table:
 
@@ -43,16 +43,16 @@ ORDER BY 1 DESC
 I divided the unit_price column in the analytics table by 1,000,000 and converted it to INT datatype: 
 
 SELECT *, (CAST("unit_price" AS INT)/1000000) AS unitpricedivided 
-FROM "analytics_1"
+FROM "analytics_1" --I had to CAST first to change datatypr from VARCHAR to NUMERIC and then divide by 1,000,000.
 
 
 I wanted to review columns in tables that only contained NULL values and replace it with relevant information. For exacmple, in the analytics table, the userid column only contains NULL values. So, I created this query: 
 
 SELECT *,
 CASE 
-WHEN userid IS NULL THEN "analytics_1"."visitId"
+WHEN userid IS NULL THEN "Not Available"
 ELSE userid
 END AS user_info
-FROM analytics_1;
+FROM analytics_1; -- changed the NULL values to "Not Available"
 
 
