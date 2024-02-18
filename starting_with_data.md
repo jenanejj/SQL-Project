@@ -1,16 +1,16 @@
-Which country has the most visitors that generates the most revenue: 
+Which country has the most visitors in countries generates the most revenue: 
 
 SQL Queries: 
 
 SELECT *, 
-ROW_NUMBER() OVER (PARTITION BY country) AS row_num
+ROW_NUMBER() OVER (PARTITION BY country ORDER BY "totalTransactionRevenue" DESC ) AS row_num
 FROM ecommerce 
 WHERE "totalTransactionRevenue" IS NOT NULL
-ORDER BY "totalTransactionRevenue" DESC
+--I'm grouping each country by transactions that are NOT NULL from highest to lowest
 
 Answer: 
 
-United States 
+Australia 
 
 
 Question 2: Which product generated the most revenue? 
