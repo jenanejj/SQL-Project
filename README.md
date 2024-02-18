@@ -7,7 +7,8 @@ My goal is to understand the data, so that I can create queries to provide resul
 1. Look into each CSV file and understand the data and datatypes 
 2. Create table and import CSV file to pgAdmin
 3. Look into each table and check columns for any outliers/NULL or duplicate data
-4. Create queries using LIMIT/GROUP BY/ORDER to understand the data and see what valuable insights 
+4. Create queries using LIMIT/GROUP BY/ORDER to understand the data and see what valuable insights
+5. Think through the perspective of a business and create queries that would be valuable to save money and generate more revenue. 
 
 ## Results
 
