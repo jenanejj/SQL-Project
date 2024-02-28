@@ -1,4 +1,4 @@
-# Final-Project-Transforming-and-Analyzing-Data-with-SQL
+# Final Project Transforming and Analyzing Data with SQL 
 
 ## Project/Goals
 My goal is to understand the data, so that I can create queries to provide results that can provide valuable insights to buisnesses.
