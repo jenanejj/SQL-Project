@@ -12,7 +12,6 @@ WHERE "transactionRevenue" IS NOT NULL
 GROUP BY "city", "country", "transactionRevenue"
 
 
-Answer:
 
 "United States"	"Sunnyvale"	"200000000"
 "United States"	"not available in demo dataset"	"1005500000"
@@ -36,8 +35,6 @@ Please note: I was not sure if I should use "visitId" or "fullvisitorId" column 
 
 
 
-Answer:
-
 
 
 
@@ -56,7 +53,6 @@ WHERE "totalTransactionRevenue" IS NOT NULL
 GROUP BY "city", "country", "v2ProductName", "visitId", "v2ProductCategory", "totalTransactionRevenue"
 
 
-Answer:
 
 
 
@@ -77,7 +73,6 @@ GROUP BY "city", "country", "v2ProductName", "visitId", "v2ProductCategory", "to
 ORDER BY "totalTransactionRevenue" DESC
 
 
-Answer:
 
 
 
