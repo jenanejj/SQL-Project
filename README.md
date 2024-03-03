@@ -14,7 +14,10 @@ My goal is to understand the data, so that I can create queries to provide resul
 
 ## Results
 
-(fill in what you discovered this data could tell you and how you used the data to answer those questions)
+Through the SQL queries I was able to understand the following: 
+
+1. The data is messy and unclear. It needs more cleaning. A lot of assumptions were needed to be made.
+2. 
 
 ## Challenges 
 1. uploading csv files to pGadmin (experienced technical issue)
