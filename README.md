@@ -17,7 +17,9 @@ My goal is to understand the data, so that I can create queries to provide resul
 Through the SQL queries I was able to understand the following: 
 
 1. The data is messy and unclear. It needs more cleaning. A lot of assumptions were needed to be made.
-2. I wanted to create SQL queries that generated information that would be valuable to buisnesses and help generate income. 
+2. I wanted to create SQL queries that generated information that would be valuable to buisnesses and help generate income.
+3. I wanted to find out which countries generated the most income, so companies can invest more in countries making more revenue - United States.
+4. I wanted to know which products were making the most revenue, so companies can order more in stock.
 
 ## Challenges 
 1. uploading csv files to pGadmin (experienced technical issue)
